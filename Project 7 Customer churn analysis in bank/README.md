@@ -32,6 +32,3 @@ Develop strategies to target specific age groups and credit ranges through tailo
 
 ## Monitoring and Evaluation
 Continuously monitor churn rates and customer demographics to assess the effectiveness of implemented strategies. Adjust tactics as necessary based on ongoing evaluation.
-
-## Project Workflow
-![Project Workflow](project_workflow.png)

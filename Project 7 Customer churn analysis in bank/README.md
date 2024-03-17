@@ -1,21 +1,37 @@
-# Churn Analysis Power BI Project
+# Customer Churn Analysis in Bank Using Power BI
 
-## Goal of Project
-The goal of this project is to perform churn analysis on banking customers using Power BI. The objective is to identify factors contributing to customer churn and develop strategies to improve customer retention.
+## Project Overview
+This project focuses on analyzing customer churn in a bank by identifying factors contributing to churn and providing recommendations for reducing churn rates. The analysis is conducted using Power BI for data visualization, DAX for KPI calculation, and various data cleaning techniques.
 
-## Tools Used
-- Power BI
-- Power Pivot
-- Data cleaning and reformatting techniques
+## Business Problem Definition
+The objective is to identify factors contributing to customer churn in the bank. Key features considered are age, credit card holders, yearly income, gender, and customer activity.
 
-## Problems Encountered
-- One of the challenges faced was dealing with a large number of values in attributes such as credit score, balance, and age. To address this issue, we grouped these values into ranges to simplify analysis.
+## Data Gathering
+Data was collected from internal bank databases, encompassing customer demographics, transaction history, and churn status.
 
-## Findings and Further Scope
-- **Female Majority in Churned Customers:** Our analysis revealed that female customers represent the majority of churned customers. Understanding their needs and preferences is crucial for developing targeted retention strategies.
-- **Inactive Credit Card Users:** Surprisingly, many churned customers had access to a credit card but were inactive members. This emphasizes the importance of effectively engaging customers to prevent attrition.
-- **Churn Rate by Age Range:** The age range of 50-60 witnessed the highest churn rate, indicating potential challenges in meeting the needs of this demographic group.
-- **Impact of Credit Scores:** Customers with low credit scores, labeled as level 1 or 2, constitute the highest majority of churned customers. Improving service offerings for this segment can help mitigate churn risk.
-- **Exceeding Churn Rate Target:** Overall, the churn rate stands at 20.4%, exceeding our target of 15%. This highlights the urgency of implementing proactive retention strategies.
+## Data Cleaning and Preprocessing
+Raw data was cleaned to remove inconsistencies and missing values. Outliers were identified and addressed. Data was reformatted into categories for better readability.
 
-This analysis provides valuable insights into customer churn behavior and lays the groundwork for developing targeted retention initiatives. Further exploration could involve implementing predictive modeling techniques to forecast churn and experimenting with personalized retention campaigns.
+## Data Analysis Techniques
+Power BI was used for data visualization, creating insightful dashboards. DAX expressions were utilized to calculate KPIs such as churn rate and average credit range.
+
+## Insights and Recommendations
+- Less credit was found to be a factor contributing to higher churn rates.
+- Churn rates increased with age, with the lowest churn observed in teenage years and the highest in the early to late 50s.
+- More males were observed among churning customers compared to females.
+- The overall churn rate of the dataset was calculated to be 20.4%, exceeding the desired 15%.
+
+### Recommendations for Churn Reduction
+To reduce churn:
+- Target age groups with higher churn rates by implementing strategies to engage them more effectively.
+- Focus on increasing the count of customers within the average credit range, as they represent a more stable group.
+- Avoid targeting customers with excessively high credit, as they exhibit increased churn rates.
+
+## Implementation Plan
+Develop strategies to target specific age groups and credit ranges through tailored marketing campaigns and personalized services. Monitor the impact of these strategies on churn rates over time.
+
+## Monitoring and Evaluation
+Continuously monitor churn rates and customer demographics to assess the effectiveness of implemented strategies. Adjust tactics as necessary based on ongoing evaluation.
+
+## Project Workflow
+![Project Workflow](project_workflow.png)

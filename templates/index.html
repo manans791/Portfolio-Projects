@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Attack Prediction</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+
+  <div class="container cool-container">
+  <div class="row">
+    <div class="col-md-7 content-left">
+      <h2 class="cool-title">Heart Attack Prediction Model</h2>
+      <p class="heart-attack-info ">A heart attack, also known as a myocardial infarction, occurs when a part of your heart muscle doesn't get enough blood. This damage can lead to lasting heart damage and even death. The most common symptom of a heart attack is chest pain or pressure. It may feel like squeezing, like a weight is on your chest, or like heartburn.</p>
+      <p class="heart-attack-info">Several factors can increase your risk of a heart attack, including:</p>
+      <ul class="risk-factors">
+        <li>High blood pressure</li>
+        <li>High cholesterol</li>
+        <li>Smoking</li>
+        <li>Diabetes</li>
+        <li>Obesity</li>
+        <li>Family history of heart disease</li>
+      </ul>
+    </div>
+    <div class="col-md-5 content-right d-flex flex-column justify-content-center align-items-center", id="button">
+      <h3>Are you ready to predict your risk?</h3>
+      <a href="#prediction-form" class="btn btn-success" id="predict-button">Take me there</a>
+    </div>
+  </div>
+</div>
+
+
+  <div id="prediction-form" class="container ">
+
+    <h3 class="form-heading">Heart Attack Prediction</h3>
+
+    <form action="/predict" method="post" class="row g-3">
+        <div class="col-md-6">
+          <label for="feature1" class="form-label">Gender :</label>
+          <input type="text" id="Gender" name="Gender" class="form-control" required="1" placeholder="0 for Female , 1 for male">
+        </div>
+        <div class="col-md-6">
+          <label for="feature2" class="form-label">Age:</label>
+          <input type="text" placeholder="Enter your Age" id="Age" name="Age" class="form-control" required="1">
+        </div>
+        <div class="col-md-6">
+          <label for="feature3" class="form-label">Education :</label>
+          <input type="text" placeholder="1 for HighSchool , 2 for Bachelors , 3 for Masters , 4 for PHD" id="Education" name="Education" class="form-control" required="1">
+        </div>
+        <div class="col-md-6">
+          <label for="feature4" class="form-label">Smoker :</label>
+          <input type="text" placeholder="0 for Not Smoking , 1 for Smoking" id="Smoker" name="Smoker" class="form-control" required="1">
+        </div>
+        <div class="col-md-6">
+          <label for="feature5" class="form-label">Cigs:</label>
+          <input type="text" placeholder="How many cigs do you consume in a day" id="Cigs" name="Cigs" class="form-control" required="1">
+        </div>
+        <div class="col-md-6">
+          <label for="feature6" class="form-label">Do You Previously had BP problem ? :</label>
+          <input type="text" placeholder="0 for No, 1 for Yes" id="BP" name="BP" class="form-control" required="1">
+        </div>
+        <div class="col-md-6">
+          <label for="feature7" class="form-label">Do You Previously had Stroke problem ? :</label>
+          <input type="text" placeholder="0 for No, 1 for Yes" id="BP" id="Stroke" name="Stroke" class="form-control" required="1">
+        </div>
+        <div class="col-md-6">
+          <label for="feature8" class="form-label">Do You Previously had Hypertension problem ? :</label>
+          <input type="text" placeholder="0 for No, 1 for Yes" id="Hypertension" name="Hypertension" class="form-control" required="1">
+        </div>
+        <div class="col-md-6">
+          <label for="feature15" class="form-label">Do You Previously had Diabetes problem ?:</label>
+          <input type="text" placeholder="0 for No, 1 for Yes" id="diabetes_exist" name="diabetes_exist" class="form-control" required="1">
+        </div>
+        <div class="col-md-6">
+          <label for="feature9" class="form-label">What is your Cholestrol Level ?:</label>
+          <input type="text" placeholder="Enter the number" id="Cholestrol" name="Cholestrol" class="form-control" required="1">
+        </div>
+        <div class="col-md-6">
+          <label for="feature10" class="form-label">What is your SYSBP Level  3:</label>
+          <input type="text" placeholder="Enter the number" id="SYSBP" name="SYSBP" class="form-control" required="1">
+        </div>
+        <div class="col-md-6">
+          <label for="feature11" class="form-label">What is your Diabetes Level? :</label>
+          <input type="text" placeholder="Enter the number" id="Diabetes" name="Diabetes" class="form-control" required="1">
+        </div>
+        <div class="col-md-6">
+          <label for="feature12" class="form-label">What is your BMI ?:</label>
+          <input type="text" placeholder="Enter the number" id="BMI" name="BMI" class="form-control" required="1">
+        </div>
+        <div class="col-md-6">
+          <label for="feature13" class="form-label">What is your Heartrate ?:</label>
+          <input type="text" placeholder="Enter the number" id="BMI" id="Heartrate" name="Heartrate" class="form-control" required="1">
+        </div>
+        <div class="col-md-6">
+          <label for="feature14" class="form-label">What is your Glucose Level ?:</label>
+          <input type="text" placeholder="Enter the number" id="Glucose" name="Glucose" class="form-control" required="1"><br>
+
+
+
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <div id="prediction-result">
+        {% if prediction %}
+            Prediction: {{ message }}
+        {% endif %}
+    </div>
+    </body>
+</html>

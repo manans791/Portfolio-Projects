@@ -1,5 +1,7 @@
 # Employee Attrition Power BI Project
 
+### Dashboard link - https://www.novypro.com/profile_projects/3manansharma?Popup=memberProject&Data=1716719577737x466208911738969600
+
 ## Goals of Project
 The goal of this project is to analyze employee attrition data and identify key factors contributing to attrition within an organization. Additionally, we aim to determine the departments and job roles most affected by attrition.
 
